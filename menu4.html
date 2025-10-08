@@ -1,0 +1,18 @@
+<section id="reservasi" class="section">
+  <h3>Reservasi & Pesanan</h3>
+  <p>Isi formulir di bawah untuk melakukan reservasi atau pesan antar.</p>
+
+  <form onsubmit="alert('Reservasi berhasil dikirim!');return false;">
+    <label>Nama</label>
+    <input type="text" required>
+    <label>Telepon / WA</label>
+    <input type="tel" required>
+    <label>Jumlah Orang / Porsi</label>
+    <input type="number" min="1" value="2" required>
+    <label>Tanggal & Waktu</label>
+    <input type="datetime-local" required>
+    <label>Catatan / Pesanan Khusus</label>
+    <textarea rows="3"></textarea>
+    <button class="cta">Kirim Reservasi</button>
+  </form>
+</section>

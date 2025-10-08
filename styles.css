@@ -1,0 +1,174 @@
+/* Olakisat - Traditional & Simple */
+:root{
+  --bg: #fbf5ee;        /* krem hangat */
+  --card: #fffaf6;
+  --accent: #7a221f;    /* marun gelap */
+  --accent-soft: #c86b3a;/* oranye hangat */
+  --muted: #6b5b50;     /* cokelat lembut */
+  --radius: 8px;
+  --gap: 14px;
+  --container: 1000px;
+  --serif: "Merriweather", Georgia, "Times New Roman", serif;
+  --sans: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Reset ringan */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: var(--serif);
+  background:var(--bg);
+  color:var(--muted);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.45;
+}
+
+/* wrapper / container */
+.container{
+  max-width:var(--container);
+  margin:20px auto;
+  padding:0 16px;
+}
+
+/* Header sederhana tradisional */
+.header{
+  background: linear-gradient(180deg, rgba(122,34,31,0.98), rgba(122,34,31,0.9));
+  color: #fff;
+  padding:18px 16px;
+  border-bottom:4px solid rgba(200,107,58,0.15);
+}
+.header h1{
+  margin:0;
+  font-family: var(--serif);
+  font-size:20px;
+  letter-spacing:0.6px;
+}
+.header .tagline{
+  margin-top:6px;
+  font-size:13px;
+  color:rgba(255,255,255,0.92);
+  font-weight:500;
+}
+
+/* layout: sidebar + content (simple) */
+.main-container{
+  display:flex;
+  gap:var(--gap);
+  margin-top:18px;
+}
+.sidebar{
+  width:240px;
+  background:var(--card);
+  padding:12px;
+  border-radius:var(--radius);
+  border:1px solid rgba(122,34,31,0.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.03);
+  font-family:var(--sans);
+}
+.sidebar ul{list-style:none;padding:0;margin:0}
+.sidebar li{margin-bottom:8px}
+.sidebar a{
+  display:block;
+  color:var(--accent);
+  text-decoration:none;
+  padding:8px;
+  border-radius:6px;
+  font-weight:600;
+  font-size:14px;
+}
+.sidebar a:hover{
+  background:rgba(200,107,58,0.08);
+}
+
+/* konten utama */
+.content{
+  flex:1;
+  min-height:60vh;
+}
+
+/* section card (clean) */
+.section{
+  background:var(--card);
+  padding:14px;
+  border-radius:var(--radius);
+  border:1px solid rgba(0,0,0,0.03);
+  box-shadow:0 6px 18px rgba(0,0,0,0.02);
+  margin-bottom:var(--gap);
+  color:var(--muted);
+}
+.hero{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.hero img{
+  width:140px;
+  height:100px;
+  object-fit:cover;
+  border-radius:6px;
+  border:3px solid #fff;
+  box-shadow:0 8px 18px rgba(0,0,0,0.06);
+}
+.hero h2{
+  margin:0;
+  color:var(--accent);
+  font-size:18px;
+  font-family:var(--serif);
+}
+.hero p{margin:6px 0;color:var(--muted);font-family:var(--serif)}
+
+/* menu grid sederhana */
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:10px;
+  margin-top:10px;
+}
+.dish{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:10px;
+  border-radius:8px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,245,240,0.98));
+  border:1px solid rgba(0,0,0,0.03);
+}
+.dish img{width:68px;height:68px;object-fit:cover;border-radius:6px}
+.dish h4{margin:0;color:var(--accent);font-size:15px;font-family:var(--serif)}
+.dish .small{font-size:13px;color:rgba(107,91,80,0.9)}
+.price{margin-left:auto;color:var(--accent-soft);font-weight:800}
+
+/* gallery minimal */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+  gap:8px;
+}
+.gallery img{width:100%;height:100px;object-fit:cover;border-radius:6px;border:1px solid rgba(0,0,0,0.02)}
+
+/* form sederhana */
+form label{display:block;margin-top:8px;font-size:13px;font-family:var(--sans)}
+input,textarea,select{
+  width:100%;
+  padding:8px;
+  border-radius:8px;
+  border:1px solid rgba(0,0,0,0.06);
+  background:#fff;
+  margin-top:6px;
+  font-family:var(--sans);
+}
+button.cta{
+  margin-top:10px;
+  background:var(--accent);
+  color:#fff;
+  border:0;padding:10px 12px;border-radius:8px;font-weight:700;cursor:pointer;
+  font-family:var(--sans);
+}
+/* responsive */
+@media (max-width:920px){
+  .main-container{flex-direction:column;padding:0 12px}
+  .sidebar{width:100%}
+  .hero{flex-direction:column;align-items:flex-start}
+  .hero img{width:100%;height:auto}
+}
